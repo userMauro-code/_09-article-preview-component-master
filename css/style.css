@@ -39,20 +39,29 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 13rem;
+    height: 15rem;
 }
 
 .card > div {
     padding: 2rem;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .content {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+}
+
+.content > .content--title {
+    color: var(--azul);
+    font-size: 1.3rem;
+}
+
+.content > .content--text {
+    color:  var(--azul-desaturado);
 }
 
 .card__footer {
@@ -71,6 +80,14 @@ body {
 .card__footer > div {
     display: flex;
     gap: 1rem;
+}
+
+.card__footer > div > div > h3 {
+    color: var(--azul);
+}
+
+.card__footer > div > div > p {
+    color:  var(--azul-grisaseo);
 }
 
 #button--share {
