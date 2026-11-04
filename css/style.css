@@ -28,8 +28,9 @@ body {
 }
 
 .card {
-    border-radius: .5rem;
+    border-radius: .8rem;
     background-color: var(--azul-grisaseo-claro);
+    max-width: 360px;
 }
 
 .card > .hero {
@@ -97,9 +98,11 @@ body {
     border: none;
     background-color: var(--azul-grisaseo);
 }
+ 
+/*clases agregadas con JS y boton compartir activado*/
 
-#button--share > img:focus {
-    background-color: aliceblue;
+#button--share > .active--button {
+    filter: brightness(0) invert(1);
 }
 
 .active--share {
@@ -133,3 +136,31 @@ body {
     height: 2rem;
 }
 
+/*modelo desktop*/
+@media(min-width: 768px) {
+    .card {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        max-width: 900px;
+        width: 100%;
+    }
+
+
+    .card__footer {
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+    }
+
+    .card > .hero {
+        background-image: url(../images/drawers.jpg);
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        border-bottom-left-radius: inherit;
+        border-top-left-radius: inherit;
+        border-top-right-radius: 0;
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+    }
+}
